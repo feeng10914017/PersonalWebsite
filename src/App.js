@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
+//排版用元件
+import MyNavbar from './components/MyNavbar'
+import MainContent from './components/MainContent'
+
+//頁面元件
+import Home from './pages/Home'
+import About from './pages/About'
+import Exercise from './pages/Exercise'
+import Portfolio from './pages/Portfolio'
+import NotFoundPage from './pages/NotFoundPage'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <MyNavbar />
+        <MainContent>
+          <Switch>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
+            <Route path="/exercise">
+              <Exercise />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="*">
+              <NotFoundPage />
+            </Route>
+          </Switch>
+        </MainContent>
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,122 @@
+.hTitle {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.125rem;
+  margin-top: 5rem;
+  .hTitle1 {
+    color: #e6a756;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .hTitle2 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+}
+.hMain {
+  margin: 5rem 0;
+  .hintro {
+    position: relative;
+    margin-bottom: 5rem;
+    .hIntroPhoto {
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .hIntroContent {
+      .hIntroTitle1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+      .hIntroTitle2 {
+        font-family: 'Noto Sans TC', sans-serif;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 100;
+      }
+      .hIntroText {
+        line-height: 1.75;
+      }
+      .hIntroButton {
+        button {
+          font-family: 'Noto Sans TC', sans-serif;
+          font-weight: 500;
+          font-size: 0.8rem;
+          padding: 1.5rem 2rem;
+          color: #fff;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .hIntroContent {
+        margin-top: 2rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60%;
+      }
+      .hIntroButton {
+        position: absolute;
+        left: 50%;
+        bottom: -2rem;
+        transform: translateX(-50%);
+      }
+    }
+    @media (min-width: 1200px) {
+      .hIntroContent {
+        margin-top: 4rem;
+        width: 50%;
+      }
+    }
+  }
+  .hSkills {
+    background-color: rgba(230, 167, 86, 0.9);
+    .hSkillsSquare {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 3rem;
+      .card-body {
+        padding: 0;
+        .hSkillTitle {
+          text-align: center;
+          .hSkillsTitle1 {
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            font-weight: 900;
+          }
+          .hSkillsTitle2 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 100;
+          }
+        }
+        .row .col-lg-4 {
+          margin-top: 1rem;
+          .card-text {
+            hr {
+              margin: 0.5rem;
+            }
+            ul {
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .hSkillsSquare::before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      bottom: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      border: 0.25rem solid rgba(255, 255, 255, 0.3);
+      border-radius: 0.5rem;
+      z-index: 0;
+    }
+  }
+}

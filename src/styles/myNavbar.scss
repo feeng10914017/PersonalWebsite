@@ -1,0 +1,27 @@
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .navLogo {
+    font-weight: 700;
+  }
+  .mr-auto {
+    width: 100%;
+    justify-content: center;
+    .nav-link {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 500;
+      margin: 0 1.5rem;
+    }
+  }
+}
+.navbar-dark .navbar-brand {
+  color: #e6a756;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+// .navbar-dark .navbar-nav .show > .nav-link,
+// .navbar-dark .navbar-nav .active > .nav-link,
+// .navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #e6a756;
+}

@@ -1,0 +1,21 @@
+// 預設變數覆蓋需要在導入Bootstrap之前
+$primary: rgba(47, 23, 15, 0.9);
+$dark: #e6a756;
+// 導入bootstrap所有的樣式與預設變數
+@import '~bootstrap/scss/bootstrap.scss';
+
+// 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
+
+.mainContentBg {
+  min-height: calc(100vh - 7.2rem);
+  padding-top: 4.5rem;
+}
+.footer {
+  background-color: rgba(47, 23, 15, 0.9);
+  div p {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@import './home.scss';
+@import './myNavbar.scss';
