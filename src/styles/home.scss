@@ -40,6 +40,26 @@
       }
       .hIntroText {
         line-height: 1.75;
+        // margin: 0;
+      }
+      .hIntroContact {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col-12 {
+          margin-bottom: 1rem;
+          .row {
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            svg {
+              font-size: 1.25rem;
+
+              margin-right: 0.5rem;
+            }
+          }
+        }
       }
       .hIntroButton {
         button {
@@ -53,7 +73,7 @@
     }
     @media (min-width: 992px) {
       .hIntroContent {
-        margin-top: 2rem;
+        margin-top: -2rem;
         position: absolute;
         left: 0;
         top: 0;
@@ -68,8 +88,8 @@
     }
     @media (min-width: 1200px) {
       .hIntroContent {
-        margin-top: 4rem;
-        width: 50%;
+        margin-top: 3rem;
+        width: 55%;
       }
     }
   }

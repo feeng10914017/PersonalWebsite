@@ -8,6 +8,7 @@ import {
   Card,
   Button,
 } from 'react-bootstrap'
+import { FiMail, FiPhone } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 function Home(props) {
   return (
@@ -29,16 +30,29 @@ function Home(props) {
           </Row>
           <Card className="hIntroContent bg-text p-4">
             <Card.Body className="mx-auto">
-              <Card.Title className="hIntroTitle1 mb-0">introduce</Card.Title>
+              <Card.Title className="hIntroTitle1 mb-0">about me</Card.Title>
               <Card.Title className="hIntroTitle2 mb-4">
                 我是吳暄恩！
               </Card.Title>
               <Card.Text className="hIntroText">
                 歡迎來到我的個人網站！2020/09參加資策會前端工程師養成班(
-                2020/09/16 - 2021/01/29
-                )，共582小時，同時開始就讀國立台北商業大學資訊管理系(假日班)
+                2020/09/16 - 2021/01/29 )，共582小時
                 。對於前端技術及網頁設計充滿熱忱，亦了解基礎後端技術，在資策會學習期間，製作的兩個專案中皆擔任技術長的職務。
               </Card.Text>
+              <div className="hIntroContact">
+                <Col xs={12} md={6}>
+                  <Row>
+                    <FiMail />
+                    <p>feeng10914017@gmail.com</p>
+                  </Row>
+                </Col>
+                <Col xs={12} md={6}>
+                  <Row>
+                    <FiPhone />
+                    <p> 0972 - 103583</p>
+                  </Row>
+                </Col>
+              </div>
               <div className="hIntroButton d-flex justify-content-center">
                 <Link to="/about">
                   <Button variant="dark" size="xl">
@@ -51,7 +65,6 @@ function Home(props) {
         </Container>
         <Jumbotron className="hSkills">
           <Container>
-            {/* <Col lg={{ span: 10, offset: 1 }}> */}
             <Card body rounded className="hSkillsSquare">
               <div className="hSkillTitle mb-4">
                 <Card.Title className="hSkillsTitle1 mb-0">skills</Card.Title>
@@ -134,7 +147,6 @@ function Home(props) {
                 </Col>
               </Row>
             </Card>
-            {/* </Col> */}
           </Container>
         </Jumbotron>
       </div>

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Navbar, Nav, ProgressBar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 function MyNavbar(props) {
-  const { location } = props
   return (
     <>
       <Navbar
@@ -23,9 +22,9 @@ function MyNavbar(props) {
             <Nav.Link as={NavLink} to="/" exact>
               首頁
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about">
+            {/* <Nav.Link as={NavLink} to="/about">
               關於我
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={NavLink} to="/exercise">
               應用練習
             </Nav.Link>
