@@ -10,7 +10,34 @@ import {
 } from 'react-bootstrap'
 import { FiMail, FiPhone } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import $ from 'jquery'
+
 function Home(props) {
+  //skillsBar animate
+  useEffect(() => {
+    const el = document.querySelectorAll('div.hSkill-box span.bar')
+    const delayAnimate = (index, data, frequency, interval) => {
+      setTimeout(() => {
+        for (let j = 0; j < frequency; j++) {
+          const step = j + 1
+          const millisecond = 1000 / frequency
+          delayAnimate2(index, data, frequency, step, millisecond)
+        }
+      }, index * interval)
+    }
+    const delayAnimate2 = (index, data, frequency, step, millisecond) => {
+      const blockWidth = (data * step) / frequency
+      console.log(blockWidth, index, data, frequency, step, millisecond)
+      setTimeout(() => {
+        el[index].style.width = blockWidth + '%'
+        el[index].firstElementChild.innerHTML = Math.round(blockWidth) + '%'
+      }, step * millisecond)
+    }
+    for (let i = 0; i < el.length; i++) {
+      const data = Number(el[i].parentElement.getAttribute('data-percent'))
+      delayAnimate(i, data, 70, 350)
+    }
+  }, [])
   return (
     <>
       <div className="hTitle d-none d-lg-block d-xl-block">
@@ -23,7 +50,7 @@ function Home(props) {
             <Col xs={12} lg={{ span: 7, offset: 5 }}>
               <Image
                 src="http://localhost:3000/images/Home/S__20652133.jpg"
-                rounded
+                rounded="true"
                 className="hIntroPhoto"
               />
             </Col>
@@ -65,87 +92,56 @@ function Home(props) {
         </Container>
         <Jumbotron className="hSkills">
           <Container>
-            <Card body rounded className="hSkillsSquare">
+            <Card body rounded="true" className="hSkillsSquare">
               <div className="hSkillTitle mb-4">
                 <Card.Title className="hSkillsTitle1 mb-0">skills</Card.Title>
                 <Card.Title className="hSkillsTitle2 mb-0">
                   技能與專長
                 </Card.Title>
               </div>
-              <Row>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>HTML / CSS</h4>
-                    <hr />
-                    <ul>
-                      <li>HTML5</li>
-                      <li>CSS3 </li>
-                      <li>CSS Framework - Bootstrap</li>
-                      <li>CSS Preprocessor - SCSS</li>
-                      <li>響應是網頁設計 ( RWD )</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>JavaScript</h4>
-                    <hr />
-                    <ul>
-                      <li>JavaScript ES6</li>
-                      <li>jQuery</li>
-                      <li>XHR / Ajax / Fetch</li>
-                      <li>callback / Promise / Async</li>
-                      <li>HTML5 JS API (SVG / location)</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>Others</h4>
-                    <hr />
-                    <ul>
-                      <li>npm / yarn 指令</li>
-                      <li>Git / Github 指令</li>
-                      <li>Postman 測試 API</li>
-                      <li>JSON Server 模擬 restful API</li>
-                      <li>Webpack / Bable 自動打包</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>React</h4>
-                    <hr />
-                    <ul>
-                      <li>React Hooks</li>
-                      <li>React Router</li>
-                      <li>React Lifecycle</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>Backend</h4>
-                    <hr />
-                    <ul>
-                      <li>PHP</li>
-                      <li>Node.js express</li>
-                      <li>MySQL CRUD</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-                <Col lg={4} md={6} sm={12}>
-                  <Card.Text>
-                    <h4>Design</h4>
-                    <hr />
-                    <ul>
-                      <li>Adobe Photoshop</li>
-                      <li>Adobe Illustrator</li>
-                      <li>Adobe XD</li>
-                    </ul>
-                  </Card.Text>
-                </Col>
-              </Row>
+              <div className="hSkill-box">
+                <h3>Development</h3>
+                <div className="hSkillsList">
+                  <ul>
+                    <li data-percent="95">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                    <li data-percent="60">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                    <li data-percent="75">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                    <li data-percent="95">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                    <li data-percent="60">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                    <li data-percent="75">
+                      <span>HTML5 & JADE</span>
+                      <span className="bar">
+                        <b></b>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </Card>
           </Container>
         </Jumbotron>
