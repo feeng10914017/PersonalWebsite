@@ -22,15 +22,15 @@ function MyNavbar(props) {
             <Nav.Link as={NavLink} to="/" exact>
               首頁
             </Nav.Link>
-            {/* <Nav.Link as={NavLink} to="/about">
+            <Nav.Link as={NavLink} to="/about">
               關於我
-            </Nav.Link> */}
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/exercise">
               應用練習
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/portfolio">
+            {/* <Nav.Link as={NavLink} to="/portfolio">
               作品集
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
           <ProgressBar striped variant="success" now={40} />
         </Navbar.Collapse>

@@ -27,7 +27,6 @@ function Home(props) {
     }
     const delayAnimate2 = (index, data, frequency, step, millisecond) => {
       const blockWidth = (data * step) / frequency
-      console.log(blockWidth, index, data, frequency, step, millisecond)
       setTimeout(() => {
         el[index].style.width = blockWidth + '%'
         el[index].firstElementChild.innerHTML = Math.round(blockWidth) + '%'
@@ -45,6 +44,7 @@ function Home(props) {
         <h1 className="hTitle2">frontend engineer</h1>
       </div>
       <div className="hMain">
+        {/* Introduction */}
         <Container className="hintro">
           <Row className="mb-3">
             <Col xs={12} lg={{ span: 7, offset: 5 }}>
@@ -57,7 +57,9 @@ function Home(props) {
           </Row>
           <Card className="hIntroContent bg-text p-4">
             <Card.Body className="mx-auto">
-              <Card.Title className="hIntroTitle1 mb-0">about me</Card.Title>
+              <Card.Title className="hIntroTitle1 mb-0">
+                Introduction
+              </Card.Title>
               <Card.Title className="hIntroTitle2 mb-4">
                 我是吳暄恩！
               </Card.Title>
@@ -90,103 +92,102 @@ function Home(props) {
             </Card.Body>
           </Card>
         </Container>
-        <Jumbotron className="hSkills">
-          <Container>
-            <Card body rounded="true" className="hSkillsSquare">
-              <div className="hSkillTitle mb-4">
-                <Card.Title className="hSkillsTitle1 mb-0">skills</Card.Title>
-                <Card.Title className="hSkillsTitle2 mb-0">
-                  技能與專長
-                </Card.Title>
-              </div>
-              <Row>
-                <Col lg={6} md={12}>
-                  <div className="hSkill-box">
-                    <h3>Programming Language</h3>
-                    <div className="hSkillsList">
-                      <ul>
-                        <li data-percent="80">
-                          <span>HTML & CSS</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="45">
-                          <span>HTML5</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="60">
-                          <span>CSS3</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="70">
-                          <span>JavaScript</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="75">
-                          <span>jQuery</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="40">
-                          <span>PHP</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+        {/* skiils Box */}
+        <Jumbotron className="bgYe">
+          <Container className="bgYeSquare">
+            {/* skiils Box title */}
+            <div className="bgYeTitle mb-4">
+              <Card.Title className="bgYeTitle1 mb-0">skills</Card.Title>
+              <Card.Title className="bgYeTitle2 mb-0">技能與專長</Card.Title>
+            </div>
+            {/* skiils Box content */}
+            <Row>
+              <Col lg={6} md={12}>
+                <div className="hSkill-box">
+                  <h3>Programming Language</h3>
+                  <div className="hSkillsList">
+                    <ul>
+                      <li data-percent="80">
+                        <span>HTML & CSS</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="45">
+                        <span>HTML5</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="60">
+                        <span>CSS3</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="70">
+                        <span>JavaScript</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="75">
+                        <span>jQuery</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="40">
+                        <span>PHP</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                    </ul>
                   </div>
-                </Col>
-                <Col>
-                  <div className="hSkill-box">
-                    <h3>Framework</h3>
-                    <div className="hSkillsList">
-                      <ul>
-                        <li data-percent="70">
-                          <span>Bootstrap</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="45">
-                          <span>ReactJS</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                        <li data-percent="35">
-                          <span>NodeJS</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+                </div>
+              </Col>
+              <Col>
+                <div className="hSkill-box">
+                  <h3>Framework</h3>
+                  <div className="hSkillsList">
+                    <ul>
+                      <li data-percent="70">
+                        <span>Bootstrap</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="45">
+                        <span>ReactJS</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                      <li data-percent="35">
+                        <span>NodeJS</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                    </ul>
                   </div>
-                  <div className="hSkill-box">
-                    <h3>Database</h3>
-                    <div className="hSkillsList">
-                      <ul>
-                        <li data-percent="35">
-                          <span>MySQL</span>
-                          <span className="bar">
-                            <b></b>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+                </div>
+                <div className="hSkill-box">
+                  <h3>Database</h3>
+                  <div className="hSkillsList">
+                    <ul>
+                      <li data-percent="35">
+                        <span>MySQL</span>
+                        <span className="bar">
+                          <b></b>
+                        </span>
+                      </li>
+                    </ul>
                   </div>
-                </Col>
-              </Row>
-            </Card>
+                </div>
+              </Col>
+            </Row>
           </Container>
         </Jumbotron>
       </div>

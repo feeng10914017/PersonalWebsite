@@ -7,7 +7,7 @@ import MainContent from './components/MainContent'
 
 //頁面元件
 import Home from './pages/Home'
-// import About from './pages/About'
+import About from './pages/About'
 import Exercise from './pages/Exercise'
 import Portfolio from './pages/Portfolio'
 import NotFoundPage from './pages/NotFoundPage'
@@ -24,9 +24,9 @@ function App() {
             <Route path="/exercise">
               <Exercise />
             </Route>
-            {/* <Route path="/about">
+            <Route path="/about">
               <About />
-            </Route> */}
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>

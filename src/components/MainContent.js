@@ -17,8 +17,12 @@ function MainContent(props) {
   )
   return (
     <>
-      <Parallax bgImage={bgimg} strength={1000}>
-        {location.pathname === '/' ? noneContainer : display}
+      <Parallax bgImage={bgimg} strength={1000} style={{ 'z-index': -99 }}>
+        {location.pathname === '/'
+          ? noneContainer
+          : location.pathname === '/exercise'
+          ? noneContainer
+          : display}
         <MyFooter />
       </Parallax>
     </>

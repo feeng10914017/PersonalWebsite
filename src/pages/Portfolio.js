@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { CardColumns } from 'react-bootstrap'
 
 function Portfolio(props) {
   return (
     <>
-      <h1>Portfolio pages</h1>
+      <CardColumns></CardColumns>
     </>
   )
 }
