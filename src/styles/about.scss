@@ -1,0 +1,23 @@
+.aArticle {
+  font-family: 'Noto Sans TC', sans-serif;
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      h6 br {
+        display: none;
+      }
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+  }
+  li {
+  }
+  .aTraining {
+  }
+}

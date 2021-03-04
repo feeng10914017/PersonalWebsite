@@ -4,11 +4,12 @@ function Exercise(props) {
   return (
     <>
       <article className="eArticle">
+        {/* practice */}
         <Jumbotron className="bgYe">
           <Container className="bgYeSquare">
-            <div className="bgYeTitle mb-4">
-              <Card.Title className="bgYeTitle1 mb-0">exercise </Card.Title>
-              <Card.Title className="bgYeTitle2 mb-0">應用練習</Card.Title>
+            <div className="bgYeTitle mb-5">
+              <Card.Title className="bgYeTitle1 mb-0">practice</Card.Title>
+              {/* <Card.Title className="bgYeTitle2 mb-0">應用練習</Card.Title> */}
             </div>
             <Row className="eCard">
               <Col xl={3} md={6} xs={12}>
@@ -98,6 +99,7 @@ function Exercise(props) {
             </Row>
           </Container>
         </Jumbotron>
+        {/* project */}
       </article>
     </>
   )

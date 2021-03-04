@@ -96,7 +96,7 @@ function Home(props) {
         <Jumbotron className="bgYe">
           <Container className="bgYeSquare">
             {/* skiils Box title */}
-            <div className="bgYeTitle mb-4">
+            <div className="bgYeTitle mb-5">
               <Card.Title className="bgYeTitle1 mb-0">skills</Card.Title>
               <Card.Title className="bgYeTitle2 mb-0">技能與專長</Card.Title>
             </div>
