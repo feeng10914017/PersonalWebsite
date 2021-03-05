@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Jumbotron, Container, Card, Row, Col, Button } from 'react-bootstrap'
+import React from 'react'
+import { Jumbotron, Container, Card, Row, Col, Image } from 'react-bootstrap'
 
 function About(props) {
   return (
@@ -16,6 +16,60 @@ function About(props) {
                 <Card.Title className="bgYeTitle1 mb-0">about me</Card.Title>
                 {/* <Card.Title className="bgYeTitle2 mb-0">應用練習</Card.Title> */}
               </div>
+              <Image
+                src="http://localhost:3000/images/Home/S__20652133.jpg"
+                rounded="true"
+                className="aPhoto"
+              />
+              <h3 className="bgYeTitle2 mb-3">基本資料</h3>
+              <ul>
+                <li>
+                  <Row>
+                    <Col sm={3} xs={12}>
+                      <h6>姓名</h6>
+                    </Col>
+                    <Col>
+                      <h6>吳暄恩 ( SYUAN EN WU )</h6>
+                    </Col>
+                  </Row>
+                </li>
+                <li>
+                  <Row>
+                    <Col sm={3} xs={12}>
+                      <h6>電話</h6>
+                    </Col>
+                    <Col>
+                      <h6>0972 - 103583</h6>
+                    </Col>
+                  </Row>
+                </li>
+                <li>
+                  <Row>
+                    <Col sm={3} xs={12}>
+                      <h6>Email</h6>
+                    </Col>
+                    <Col>
+                      <h6>feeng10914017@gmail.com</h6>
+                    </Col>
+                  </Row>
+                </li>
+                <li>
+                  <Row>
+                    <Col sm={3} xs={12}>
+                      <h6>GitHub</h6>
+                    </Col>
+                    <Col>
+                      <a
+                        href="https://github.com/feeng10914017"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <h6>github.com/feeng10914017</h6>
+                      </a>
+                    </Col>
+                  </Row>
+                </li>
+              </ul>
               <h3 className="bgYeTitle2 mb-3">學歷</h3>
               <ul>
                 <li>

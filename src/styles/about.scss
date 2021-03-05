@@ -1,5 +1,11 @@
 .aArticle {
   font-family: 'Noto Sans TC', sans-serif;
+  .aPhoto {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
   ul {
     list-style: none;
     li {
@@ -15,9 +21,5 @@
       font-size: 0.9rem;
       text-align: right;
     }
-  }
-  li {
-  }
-  .aTraining {
   }
 }

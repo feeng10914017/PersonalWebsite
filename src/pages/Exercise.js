@@ -1,9 +1,93 @@
-import React, { useState, useEffect } from 'react'
-import { Jumbotron, Container, Card, Row, Col, Button } from 'react-bootstrap'
+import React from 'react'
+import {
+  Jumbotron,
+  Container,
+  Card,
+  Row,
+  Col,
+  Button,
+  Image,
+} from 'react-bootstrap'
 function Exercise(props) {
   return (
     <>
       <article className="eArticle">
+        {/* project */}
+        <Container className="eProject">
+          <section>
+            <div className="eProjectTitle d-flex">
+              <Card className="bg-text p-5 d-flex ml-auto rounded">
+                <Card.Body className="p-0">
+                  <Card.Title className="eProjectTitle1 mb-0">
+                    project 1
+                  </Card.Title>
+                  <Card.Title className="eProjectTitle2 mb-0">
+                    後臺管理系統
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <Image
+              src="http://localhost:3000/images/Exercise/project1.webp"
+              className="eProjectPhoto mx-auto d-flex"
+              // fluid
+              rounded
+            />
+            <div className="eProjectText">
+              <Card className="bg-text p-5 d-flex ml-auto rounded">
+                <Card.Body className="p-0">
+                  <Card.Text>
+                    運用 Bootstrap 排版，使用 PHP 串接 MySQL資料庫，透過 Ajax
+                    來做頁面更新，並採用前、後端混和的編寫方式
+                    ，實作新增、搜尋、修改、刪除等功能。
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </section>
+          <section>
+            <div className="eProjectTitle d-flex">
+              <Card className="bg-text p-5 d-flex ml-auto rounded">
+                <Card.Body className="p-0">
+                  <Card.Title className="eProjectTitle1 mb-0">
+                    project 2
+                  </Card.Title>
+                  <Card.Title className="eProjectTitle2 mb-0">
+                    JREAM 機車租賃網站
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <Image
+              src="http://localhost:3000/images/Exercise/project1.webp"
+              className="eProjectPhoto mx-auto d-flex"
+              // fluid
+              rounded
+            />
+            <div className="eProjectText">
+              <Card className="bg-text p-5 d-flex ml-auto rounded">
+                <Card.Body className="p-0">
+                  <Card.Text>
+                    JREAM是由「Just、Ride、Enjoy、Action、Motor」組合而成，取DREAM夢想的諧音，希望顧客像我們租車後可以享受騎乘的快感，一圓他們的重機夢‧
+                  </Card.Text>
+                  <h4>我所負責的部分 MY PART</h4>
+                  <Card.Text>
+                    <ul>
+                      <li>首頁設計、製作</li>
+                      <li>購物車系統</li>
+                      <li>版本控管、系統整合</li>
+                      <li>網站主視覺規劃</li>
+                    </ul>
+                  </Card.Text>
+                  <Card.Text>
+                    此專案主要使用React作為前端開發並使用Bootstrap框架架設網站，後端使用Node.js連接資料庫(MySQL)。使用GitHub進行版本管控。
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </section>
+        </Container>
+
         {/* practice */}
         <Jumbotron className="bgYe">
           <Container className="bgYeSquare">
@@ -99,7 +183,6 @@ function Exercise(props) {
             </Row>
           </Container>
         </Jumbotron>
-        {/* project */}
       </article>
     </>
   )
