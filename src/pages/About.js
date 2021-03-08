@@ -17,7 +17,7 @@ function About(props) {
                 {/* <Card.Title className="bgYeTitle2 mb-0">應用練習</Card.Title> */}
               </div>
               <Image
-                src="http://localhost:3000/PersonalWebsite/images/Home/S__20652133.jpg"
+                src="./images/Home/S__20652133.jpg"
                 rounded="true"
                 className="aPhoto"
               />
