@@ -37,7 +37,7 @@ function Exercise(props) {
               </Card>
             </div>
             <Image
-              src="http://localhost:3000/images/Exercise/project1.webp"
+              src="http://localhost:3000/PersonalWebsite/images/Exercise/project1.webp"
               className="eProjectPhoto mx-auto d-flex"
               // fluid
               rounded
@@ -115,7 +115,7 @@ function Exercise(props) {
                 <Card border="primary" className="text-center">
                   <Card.Img
                     variant="bottom"
-                    src="http://localhost:3000/images/Exercise/hairmap.png"
+                    src="http://localhost:3000/PersonalWebsite/images/Exercise/hairmap.png"
                   />
                   <Card.Body>
                     <Card.Title>髮廊首頁實作</Card.Title>
@@ -136,7 +136,7 @@ function Exercise(props) {
                 <Card border="primary" className="text-center">
                   <Card.Img
                     variant="bottom"
-                    src="http://localhost:3000/images/Exercise/library.png"
+                    src="http://localhost:3000/PersonalWebsite/images/Exercise/library.png"
                   />
                   <Card.Body>
                     <Card.Title>博物館圖書資訊實作</Card.Title>
@@ -157,7 +157,7 @@ function Exercise(props) {
                 <Card border="primary" className="text-center">
                   <Card.Img
                     variant="bottom"
-                    src="http://localhost:3000/images/Exercise/flipCard.png"
+                    src="http://localhost:3000/PersonalWebsite/images/Exercise/flipCard.png"
                   />
                   <Card.Body>
                     <Card.Title>翻牌小遊戲實作</Card.Title>
@@ -178,7 +178,7 @@ function Exercise(props) {
                 <Card border="primary" className="text-center">
                   <Card.Img
                     variant="bottom"
-                    src="http://localhost:3000/images/Exercise/shppingCart.png"
+                    src="http://localhost:3000/PersonalWebsite/images/Exercise/shppingCart.png"
                   />
                   <Card.Body>
                     <Card.Title>購物車功能實作</Card.Title>

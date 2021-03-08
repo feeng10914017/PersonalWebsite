@@ -14,7 +14,7 @@ import NotFoundPage from './pages/NotFoundPage'
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <MyNavbar />
         <MainContent>
           <Switch>

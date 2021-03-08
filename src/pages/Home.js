@@ -48,7 +48,7 @@ function Home(props) {
           <Row className="mb-3">
             <Col xs={12} lg={{ span: 7, offset: 5 }}>
               <Image
-                src="http://localhost:3000/images/Home/S__20652133.jpg"
+                src="http://localhost:3000/PersonalWebsite/images/Home/S__20652133.jpg"
                 rounded="true"
                 className="hIntroPhoto"
               />
