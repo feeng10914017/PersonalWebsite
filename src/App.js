@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 //排版用元件
 import MyNavbar from './components/MyNavbar'
 import MainContent from './components/MainContent'
+import ScrollToTop from './components/ScrollToTop'
 
 //頁面元件
 import Home from './pages/Home'
@@ -15,26 +16,28 @@ function App() {
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
-        <MyNavbar />
-        <MainContent>
-          <Switch>
-            <Route path="/portfolio">
-              <Portfolio />
-            </Route>
-            <Route path="/exercise">
-              <Exercise />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="*">
-              <NotFoundPage />
-            </Route>
-          </Switch>
-        </MainContent>
+        <ScrollToTop>
+          <MyNavbar />
+          <MainContent>
+            <Switch>
+              <Route path="/portfolio">
+                <Portfolio />
+              </Route>
+              <Route path="/exercise">
+                <Exercise />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="*">
+                <NotFoundPage />
+              </Route>
+            </Switch>
+          </MainContent>
+        </ScrollToTop>
       </Router>
     </>
   )
