@@ -1,5 +1,6 @@
 {
-  "name": "tomato_clock",
+  "name": "personal_website",
+  "homepage": "https://feeng10914017.github.io/PersonalWebsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,13 +9,11 @@
     "@testing-library/user-event": "^12.7.3",
     "bootstrap": "^4.6.0",
     "gh-pages": "^3.1.0",
-    "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
-    "react-parallax": "^3.2.1",
     "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -24,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
