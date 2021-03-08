@@ -5,7 +5,9 @@
       margin-bottom: 5rem;
       .eProjectTitle {
         margin-bottom: -3rem;
+
         .card {
+          z-index: 1;
           .eProjectTitle1 {
             text-transform: uppercase;
             font-size: 1.25rem;
@@ -22,7 +24,16 @@
         width: 85%;
         object-fit: cover;
         overflow: hidden;
-        z-index: 1;
+        z-index: 0;
+      }
+      .eProjectVideoWrapper {
+        position: relative;
+        padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+        .eProjectVideo {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
       .eProjectText {
         font-family: 'Noto Sans TC', sans-serif;
@@ -44,6 +55,14 @@
             margin-top: 1rem;
           }
         }
+      }
+    }
+    .active {
+      .eProjectTitle {
+        margin: 0;
+      }
+      .eProjectText {
+        margin: 0;
       }
     }
   }

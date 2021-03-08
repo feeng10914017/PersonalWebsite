@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 import {
   Jumbotron,
   Container,
@@ -9,6 +10,14 @@ import {
   Image,
 } from 'react-bootstrap'
 function Exercise(props) {
+  function videoOnPlay() {
+    const myProjectVideo = document.getElementById('eProject2')
+    myProjectVideo.classList.add('active')
+  }
+  function videoOnEnded() {
+    const myProjectVideo = document.getElementById('eProject2')
+    myProjectVideo.classList.remove('active')
+  }
   return (
     <>
       <article className="eArticle">
@@ -45,7 +54,7 @@ function Exercise(props) {
               </Card>
             </div>
           </section>
-          <section>
+          <section id="eProject2">
             <div className="eProjectTitle d-flex">
               <Card className="bg-text p-5 d-flex ml-auto rounded">
                 <Card.Body className="p-0">
@@ -58,12 +67,18 @@ function Exercise(props) {
                 </Card.Body>
               </Card>
             </div>
-            <Image
-              src="http://localhost:3000/images/Exercise/project1.webp"
-              className="eProjectPhoto mx-auto d-flex"
-              // fluid
-              rounded
-            />
+            <div className="eProjectPhoto eProjectVideoWrapper mx-auto d-flex">
+              <ReactPlayer
+                controls="true"
+                width="100%"
+                height="100%"
+                className="eProjectVideo"
+                url="https://www.youtube-nocookie.com/embed/bPlqrH9VUTs"
+                onPlay={videoOnPlay}
+                onPause={videoOnEnded}
+                onEnded={videoOnEnded}
+              />
+            </div>
             <div className="eProjectText">
               <Card className="bg-text p-5 d-flex ml-auto rounded">
                 <Card.Body className="p-0">

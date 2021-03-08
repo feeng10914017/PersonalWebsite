@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import { Navbar, Nav, ProgressBar } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 function MyNavbar(props) {
   return (
@@ -32,7 +32,6 @@ function MyNavbar(props) {
               作品集
             </Nav.Link> */}
           </Nav>
-          <ProgressBar striped variant="success" now={40} />
         </Navbar.Collapse>
       </Navbar>
     </>
