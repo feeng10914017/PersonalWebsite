@@ -25,7 +25,7 @@ function MyNavbar(props) {
               關於我
             </Nav.Link>
             <Nav.Link as={NavLink} to="/exercise">
-              應用練習
+              作品集
             </Nav.Link>
             {/* <Nav.Link as={NavLink} to="/portfolio">
               作品集

@@ -119,7 +119,7 @@ function Exercise(props) {
                   <Card.Body>
                     <Card.Title>髮廊首頁實作</Card.Title>
                     <Card.Text>
-                      使用HTML與CCS的flex來排版製作RWD響應是網站。
+                      使用HTML與CCS的flex來排版製作RWD響應式網站。
                     </Card.Text>
                     <Button
                       variant="primary"
@@ -140,7 +140,7 @@ function Exercise(props) {
                   <Card.Body>
                     <Card.Title>博物館圖書資訊實作</Card.Title>
                     <Card.Text>
-                      使用Bootstrap來排版製作RWD響應是網站。
+                      使用Bootstrap來排版製作RWD響應式網站。
                     </Card.Text>
                     <Button
                       variant="primary"
